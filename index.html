@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel, tijera</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+     </style>
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <!--section rounds-->
+    <main class="container">
+        <div class="rounds">
+            <h2>How many rounds?</h2>
+            <div id="checkRounds">
+                <div class="group-input-label">
+                    <input type="radio" name="rounds" id="five" value="5" checked>
+                    <label for="five"> 5</label> 
+                </div>
+
+                <div class="group-input-label">
+                    <input type="radio" name="rounds" id="ten" value="10">
+                    <label for="ten"> 10</label> 
+                </div>
+
+                <div class="group-input-label">
+                    <input type="radio" name="rounds" id="fifteen" value="15">
+                    <label for="fifteen"> 15</label> 
+                </div>
+
+                <div class="group-input-label">
+                    <input type="radio" name="rounds" id="twenty" value="20">
+                    <label for="twenty"> 20</label> 
+                </div>
+            </div>
+            <div id="countdown">countdown</div>
+        </div>
+
+        <!--section scores-->
+        <div class="scores">
+            <span id="user-score">0</span> :
+            <span id="comp-score">0</span>
+        </div>
+
+        <div class="score-container">
+            <span class="user">YOU</span>
+            <span id="score"></span>
+            <span class="computer">COMPUTER</span>
+        </div>
+
+        <!--section result-->
+        <div id="result">
+            <p>Let´s start to play!</p>
+        </div>
+
+        <!--section buttons options-->
+        <div class="options">
+            <button id="rock" onclick="play()" value="rock">
+                <img class="" src="assets/img/piedra.png" alt="rock symbol">
+
+            </button>
+            <button id="paper" onclick="play()" value="paper">
+                <img src="assets/img/papel.png" alt="paper symbol">
+
+            </button>
+            <button id="scissors" onclick="play()" value="scissors">
+                <img src="assets/img/tijera.png" alt="scissors symbol">
+
+            </button>
+        </div>
+    </main>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
