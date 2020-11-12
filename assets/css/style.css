@@ -21,36 +21,43 @@ h1 {
     width: 80%;
     margin: 5vh auto;
     padding: 2vh;
+    display: flex;
+    flex-direction: column;
 }
 .rounds, .scores {
     border: 2px solid #fff;
     text-align:center;
-    padding: 1vh 0;
 }
-.rounds {
+#checkRounds {
     display: grid;
-    grid-template-columns: 25%, 25%, 25%, 25%;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1vh 0;
 }
 
 h2 {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-.scores {
+/* .scores {
     margin: 1vh 0;
-}
+} */
 span, label {
     font-size: 2rem;
 }
 
-/* #result {
-    height: 40vh;
-} */
+#result {
+    height: 20vh;
+    text-align: center;
+}
+.result-p {
+    font-size: 1.7rem;
+    text-align: center;
+}
 .options {
     /* width: 50%; */
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
 }
 button {
@@ -58,12 +65,83 @@ button {
     width: 30%;
 
 }
-.option {
-    width: 33%;
+.option-button {
+    width: 30%;
 }
 img {
     width: 80%;
 }
 img:hover {
     box-shadow: #fff;
+}
+/* .hide {
+    display: none;
+} */
+#scores {
+	/* border: 3px solid #fff; */
+	width: 90%;
+	margin: 4vh auto;
+	border-radius: 4px;
+	text-align: center;
+	padding: 1vh 0;
+	position: relative;
+}
+
+.badge {
+	background: #e2584d;
+	font-size: 14px;
+	padding: 7px 3px;
+}
+
+#user-label {
+	position: absolute;
+	top: 50%;
+	left: -5%;
+    transform: translate(-10%, -50%);
+    padding: 7px 15px;
+}
+
+#computer-label {
+	position: absolute;
+	top: 50%;
+	right: -10%;
+	transform: translate(10%, -50%);
+}
+#reset-button {
+    background: lightblue;
+    font-weight: 600;
+    border-radius: 10px;
+    color: #fff;
+    margin: 5vh auto;
+    padding: 1vh;
+}
+
+@media only screen and (min-width: 630px) {
+    body {
+      background-color: yellow;
+    }
+    .badge {
+        padding: 10px 6px;
+    }
+    .container {
+        width: 80%;
+    }
+
+  }
+
+@media only screen and (min-width: 768px) {
+body {
+    background-color: #A6D232;
+}
+.badge {
+    padding: 15px 10px;
+}
+#user-label {
+
+    padding: 15px 15px;
+}
+.container {
+    width: 800px;
+}
+
 }

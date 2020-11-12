@@ -18,59 +18,59 @@
     <main class="container">
         <div class="rounds">
             <h2>How many rounds?</h2>
+            <p id="countdown-rounds">countdown</p>
             <div id="checkRounds">
                 <div class="group-input-label">
-                    <input type="radio" name="rounds" id="five" value="5" checked>
+                    <input type="radio" name="rounds" value="5" checked>
                     <label for="five"> 5</label> 
                 </div>
 
                 <div class="group-input-label">
-                    <input type="radio" name="rounds" id="ten" value="10">
+                    <input type="radio" name="rounds" value="10">
                     <label for="ten"> 10</label> 
                 </div>
 
                 <div class="group-input-label">
-                    <input type="radio" name="rounds" id="fifteen" value="15">
+                    <input type="radio" name="rounds"  value="15">
                     <label for="fifteen"> 15</label> 
                 </div>
 
                 <div class="group-input-label">
-                    <input type="radio" name="rounds" id="twenty" value="20">
+                    <input type="radio" name="rounds" value="20">
                     <label for="twenty"> 20</label> 
                 </div>
             </div>
-            <div id="countdown">countdown</div>
         </div>
 
         <!--section scores-->
-        <div id="scores">
-            <span class="user">YOU</span>
-            <span id="user-score">0</span> :
-            <span id="computer-score">0</span>
-            <span class="computer">COMPUTER</span>
+        <div id="scores" class="scores">
+            <div id="user-label" class="badge">YOU</div>
+            <span id="user-score">0</span> : <span id="computer-score">0</span>
+            <div id="computer-label" class="badge">COMPUTER</div>
         </div>
-
-        <!--section result-->
+        <!-- section result -->
         <div id="result">
-            <p>Let´s start to play!</p>
+            <p class="result-p">Let´s start to play!</p>
         </div>
 
         <!--section buttons options-->
         <div class="options" id="options">
-            <button id="rock" class="rock" value="rock" onclick="play(0)">rock
+            <button id="rock" class="option-button" value="rock" onclick="play(0)">rock
                 <img class="" src="assets/img/piedra.png" alt="rock symbol">
 
             </button>
-            <button id="paper" class="paper" value="paper" onclick="play(1)">paper
+            <button id="paper" class="option-button" value="paper" onclick="play(1)">paper
                 <img src="assets/img/papel.png" alt="paper symbol">
 
             </button>
-            <button id="scissors" class="scissors" value="scissors" onclick="play(2)">scissors
+            <button id="scissors" class="option-button" value="scissors" onclick="play(2)">scissors
                 <img src="assets/img/tijera.png" alt="scissors symbol">
 
             </button>
             <p id="option-selected"></p>
         </div>
+
+        <button id="reset-button" class="hide">Restart</button>
     </main>
 
 

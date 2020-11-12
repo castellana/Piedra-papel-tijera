@@ -1,38 +1,31 @@
-const fiveRounds = document.getElementById('five')
-// console.log(fiveRounds);
-const tenRounds = document.getElementById('ten')
-const fifteenRounds = document.getElementById('fifteen')
-const twentyRounds = document.getElementById('twenty')
-
-const countdown = document.getElementById('countdown')
-
+const countdown = document.getElementById('countdown-rounds')
 const options=["rock","paper","scissors"];
 let userPoints=0;
 let computerPoints=0;
-
 let mycount = 0
-// input.value
-// if (fiveRounds.checked && mycount<= value
+const rock= 0;
+const paper = 1;
+const scissors = 2;
 
+//Reset the game
+document.querySelector('#reset-button').addEventListener('click', () =>
+location.reload())
+
+//Play the game
 function play(value) {
+
+    //How many rounds?
     mycount++
-    if (fiveRounds.checked && mycount<= 5) {
-        countdown.innerHTML = `Rounds: ${mycount}/5`
-        // if (value == 5) {
-        //     document.getElementById('rock').disabled = "true";
-        // }
+    const rounds = document.querySelector('input:checked').value;
+    // console.log(rounds);
+    countdown.innerHTML = `Rounds: ${mycount}/${rounds}`
 
-    } else if (tenRounds.checked && mycount<= 10) {
-        countdown.innerHTML = `Rounds: ${mycount}/10`
-    } else if (fifteenRounds.checked && mycount<= 15) {
-        countdown.innerHTML = `Rounds: ${mycount}/15`
-    } else if (twentyRounds.checked && mycount<= 20) {
-        countdown.innerHTML = `Rounds: ${mycount}/20`
-    } 
+    if (mycount == rounds) {
+        console.log("test");
+        document.querySelector(".options").style = 'display:none';
+    }
+    
 
-    const rock= 0;
-    const paper = 1;
-    const scissors = 2;
 
     const textWin = "<span style='color:green;'> You won! :-)</span>";
     const textLost = "<span style='color:red;'> You lost :-( </span>";
@@ -40,29 +33,34 @@ function play(value) {
 
 
     let result =document.getElementById("result");
-    // let scores =document.getElementById("scores");
-    let message="";
+    // let message="";
 
-    let userChoice=value;
-    let computerChoice=Math.floor(Math.random()*3);
     
-    message +="<div>You chose <b>" + options[userChoice]+"</b></div>";
-    message +="<div>The computer chose <b>"+ options[computerChoice]+"</b></div>";
-    message +="<div style='font-size:1.3em; padding:10px;'>";
-    //-----Evaluamos las elecciones------
-        if(userChoice==rock) {
-            if(computerChoice==rock) {
-            message += textTie;
-            }
-            else if(computerChoice==paper){
-                message += "Rock loses against paper" + textLost;
-                computerPoints++;
-            }
-            else if(computerChoice==scissors){
-                message += "Rock wins against scissors" + textWin;
-                userPoints++;
-            }
+
+    // message +="<div>You chose <b>" + options[userChoice]+"</b></div>";
+    // message +="<div>The computer chose <b>"+ options[computerChoice]+"</b></div>";
+   
+
+    //Get the Choices of user and computer:
+    let userChoice = value;
+    let computerChoice = Math.floor(Math.random()*3);
+    let message = document.getElementsByClassName('result-p').innerHTML = `You chose <b> ${options[userChoice]}</b>, the computer chose <b> ${options[computerChoice]}</b>`
+     message +="<div style='font-size:1.3em; padding:10px;'>";
+    
+    //Compare both choices:
+    if(userChoice == rock) {
+        if(computerChoice == rock) {
+        message += textTie;
         }
+        else if(computerChoice==paper){
+            message += "Rock loses against paper" + textLost;
+            computerPoints++;
+        }
+        else if(computerChoice==scissors){
+            message += "Rock wins against scissors" + textWin;
+            userPoints++;
+        }
+    }
     
     if(userChoice==paper) {
         if(computerChoice==rock) {
