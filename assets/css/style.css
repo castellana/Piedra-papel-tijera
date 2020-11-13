@@ -5,7 +5,7 @@
 }
 body {
     background: #A6D232;
-    height: 100vh;
+    max-height: 100vh;
 }
 header {
     background: lightblue;
@@ -47,7 +47,7 @@ span, label {
 }
 
 #result {
-    height: 20vh;
+    /* height: 10vh; */
     text-align: center;
 }
 .message {
@@ -67,6 +67,7 @@ span, label {
     width: 30%;
     background: none;
     border:none;
+    outline: none;
     text-align: center;
     overflow: hidden;
 
@@ -81,9 +82,7 @@ img {
     background-color: #06d6a0;
    
 } */
-/* .hide {
-    display: none;
-} */
+
 #scores {
 	/* border: 3px solid #fff; */
 	width: 90%;
@@ -153,12 +152,15 @@ img {
     .container {
         width: 80%;
     }
+    #computer-label {
+        right: -5%;
+    }
 
   }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 750px) {
 body {
-    background-color: #A6D232;
+    background-color: #A6D232
 }
 /* .container {
     height: 70vh;

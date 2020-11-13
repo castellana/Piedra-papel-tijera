@@ -15,9 +15,9 @@ location.reload())
 function play(value) {
     const userScore = document.getElementById('user-score');
     const computerScore = document.getElementById('computer-score');
-    const textWin = "<p style='color:green;'> You won this round! :-)</p>";
-    const textLost = "<p style='color:red;'> You lost this round :-( </p>";
-    const textTie = "<p style='color:blue;'> You both tied this round</p>";
+    const textWin = "<p style='color:green; margin-top: 2vh;'> You won this round! :-)</p>";
+    const textLost = "<p style='color:red; margin-top: 2vh;'> You lost this round :-( </p>";
+    const textTie = "<p style='color:blue; margin-top: 2vh;'> You both tied this round</p>";
 
 
     let result =document.getElementById("result");
@@ -102,7 +102,7 @@ function play(value) {
     //         document.getElementById(userChoice).classList.add("red-glow");
     // setTimeout(()=>document.getElementById('userChoice').classList.remove("red-glow"),750);
         } else {
-            result.innerHTML += `<span>You both have tied. Nobody wins, try more rounds!</span>`
+            result.innerHTML += `<span>You both tied. Try more rounds!</span>`
         }
     }
 } //end of play()
