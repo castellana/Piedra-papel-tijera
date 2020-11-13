@@ -15,18 +15,15 @@ location.reload())
 function play(value) {
     const userScore = document.getElementById('user-score');
     const computerScore = document.getElementById('computer-score');
-    const textWin = "<p style='color:green; margin-top: 2vh;'> You won this round! :-)</p>";
-    const textLost = "<p style='color:red; margin-top: 2vh;'> You lost this round :-( </p>";
-    const textTie = "<p style='color:blue; margin-top: 2vh;'> You both tied this round</p>";
-
-
+    const textWin = "<p style='color: #1d6623; font-weight: bold; margin-top: 2vh; font-size: 1.5rem;'> You won this round! :-)</p>";
+    const textLost = "<p style='color:red; margin-top: 2vh; font-size: 1.5rem;'> You lost this round :-( </p>";
+    const textTie = "<p style='color:blue; margin-top: 2vh;font-size: 1.5rem;'> You both tied this round</p>";
     let result =document.getElementById("result");
 
 
     //How many rounds?
     mycount++
     const rounds = document.querySelector('input:checked').value;
-    // console.log(rounds);
     countdown.innerHTML = `Rounds: ${mycount}/${rounds}`
    
 
@@ -34,56 +31,52 @@ function play(value) {
     let userChoice = value;
     let computerChoice = Math.floor(Math.random()*3);
     let message = document.getElementsByClassName('message').innerHTML = `You chose <b> ${options[userChoice]}</b>, the computer chose <b> ${options[computerChoice]}</b>`
-    message += "<br>"  //"<div style='font-size:1.3em; padding:10px;'>";
+    message += "<br>"
     
     //Compare both choices:
     if(userChoice == rock) {
         if(computerChoice == rock) {
         message += textTie;
         }
-        else if(computerChoice==paper){
+        else if(computerChoice == paper){
             message += "-Paper beats Rock-" + textLost;
             computerPoints++;
-    //         userChoice.classList.add("red-glow");
-    // setTimeout(()=>userChoice.classList.remove("red-glow"),750);
-
         }
-        else if(computerChoice==scissors){
+        else if(computerChoice == scissors){
             message += "-Rock beats Scissors-" + textWin;
             userPoints++;
         }
     }
     
-    if(userChoice==paper) {
-        if(computerChoice==rock) {
+    if(userChoice == paper) {
+        if(computerChoice == rock) {
         message += "-Paper beats Rock-" + textWin;
         userPoints++;
         }
-        else if(computerChoice==paper){
+        else if(computerChoice == paper){
         message += textTie;
         }
-        else if(computerChoice==scissors){
+        else if(computerChoice == scissors){
         message += "-Scissors beat Paper-" + textLost;
         computerPoints++;
         }
     }
     
-    if(userChoice==scissors){
-        if(computerChoice==rock){
+    if(userChoice == scissors){
+        if(computerChoice == rock){
         message += "-Rock beats Scissors-" + textLost;
         computerPoints++;
         }
-        else if(computerChoice==paper){
+        else if(computerChoice == paper){
         message += "-Scissors beat Paper-" + textWin;
         userPoints++;
-        } else if(computerChoice==scissors){
+        } else if(computerChoice == scissors){
         message += textTie;
         }
     }
-    message +="</div>";
     
-    //--- imprimimos resultados----
-    result.innerHTML=message;
+    //we print results
+    result.innerHTML = message;
     userScore.innerHTML = userPoints;
     computerScore.innerHTML = computerPoints;
    
@@ -92,17 +85,16 @@ function play(value) {
         console.log("test");
         document.querySelector(".options").style = 'display:none';
         if (userPoints > computerPoints) {
-            result.innerHTML += `<span style='margin-top: 2vh'>You are the winner!</span>` 
-            // result.style.transform = scale(2)
-            // document.getElementById(userChoice).classList.add("green-glow");
-            // setTimeout(()=>document.getElementById(userChoice).classList.remove("green-glow"),750);
+            result.innerHTML += `<span class="span-final">You are the winner!</span>` 
+            userScore.style = 'font-weight: bold'
         } else if (userPoints < computerPoints) {
             console.log("rounds finished");
-            result.innerHTML += `<span>Sorry, you lost at the end...</span>`
-    //         document.getElementById(userChoice).classList.add("red-glow");
-    // setTimeout(()=>document.getElementById('userChoice').classList.remove("red-glow"),750);
+            result.innerHTML += `<span class="span-final">Sorry, you lost at the end...</span>`
+            computerScore.style = 'font-weight: bold'
         } else {
-            result.innerHTML += `<span>You both tied. Try more rounds!</span>`
+            result.innerHTML += `<span class="span-final">You both tied. Try more rounds!</span>`
+            userScore.style =  'font-weight: bold'
+            computerScore.style= 'font-weight: bold'
         }
     }
 } //end of play()

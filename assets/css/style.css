@@ -7,16 +7,18 @@ body {
     background: #A6D232;
     max-height: 100vh;
 }
+
 header {
     background: lightblue;
     padding: 2vh 0;
 }
+
 h1 {
     color: #fff;
     text-align: center;
     font-size: 2rem;
-    
 }
+
 .container {
     border: 2px solid #fff;
     width: 80%;
@@ -25,10 +27,12 @@ h1 {
     display: flex;
     flex-direction: column;
 }
+
 .rounds, .scores {
     border: 2px solid #fff;
     text-align:center;
 }
+
 #checkRounds {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -39,31 +43,34 @@ h2 {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-/* .scores {
-    margin: 1vh 0;
-} */
+
 span, label {
     font-size: 2rem;
 }
+.span-final {
+    font-weight: bold;
+    margin-top: 2vh;
+}
 
 #result {
-    /* height: 10vh; */
     text-align: center;
 }
+
 .message {
     font-size: 1.7rem;
     text-align: center;
 }
+
 .final-message {
     font-size: 2rem;
 }
+
 .options {
     width: 100%;
     margin: 3vh auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .option-button {
@@ -71,23 +78,13 @@ span, label {
     background: none;
     border:none;
     outline: none;
-    text-align: center;
-    overflow: hidden;
-
 }
+
 img {
     width: 80%;
-    border-radius: 50%;
 }
-/* img:hover {
-    border: 7px solid #06d6a0;
-    box-shadow: 0 0 10px #06d6a0;
-    background-color: #06d6a0;
-   
-} */
 
 #scores {
-	/* border: 3px solid #fff; */
 	width: 90%;
 	margin: 4vh auto;
 	border-radius: 4px;
@@ -117,6 +114,7 @@ img {
 	right: -10%;
 	transform: translate(10%, -50%);
 }
+
 #reset-button {
     background: lightblue;
     font-weight: 600;
@@ -127,28 +125,7 @@ img {
     font-size: 1.5rem;
 }
 
-.green-glow{
-    border: 7px solid #06d6a0;
-    box-shadow: 0 0 10px #06d6a0;
-    background-color: #06d6a0;
-}
-
-.red-glow{
-    border: 5px solid #e63946;
-    box-shadow: 0 0 10px #e63946;
-    background-color: #e63946;
-}
-
-.gray-glow{
-    border: 5px solid #464647;
-    box-shadow: 0 0 10px #464647;
-    background-color: #464647;
-}
-
 @media only screen and (min-width: 630px) {
-    body {
-      background-color: yellow;
-    }
     .badge {
         padding: 10px 6px;
     }
@@ -158,38 +135,31 @@ img {
     #computer-label {
         right: -5%;
     }
-
-  }
+}
 
 @media only screen and (min-width: 750px) {
-body {
-    background-color: #A6D232
-}
-/* .container {
-    height: 70vh;
-} */
-.badge {
-    padding: 15px 10px;
-}
-#user-label {
-    padding: 15px 15px;
-}
-.container {
-    width: 800px;
-}
-h2 {
-    font-size: 1.8rem;
-}
-#checkRounds {
-    margin: auto;
-    width: 70%;
-}
-#scores {
-    width: 50%;
-    padding: 2vh 0;
-}
-.rounds {
-    width: 750px;
-    margin: 0 auto;
-}
+    .badge {
+        padding: 15px 10px;
+    }
+    #user-label {
+        padding: 15px 15px;
+    }
+    .container {
+        width: 800px;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    #checkRounds {
+        margin: auto;
+        width: 70%;
+    }
+    #scores {
+        width: 50%;
+        padding: 2vh 0;
+    }
+    .rounds {
+        width: 750px;
+        margin: 0 auto;
+    }
 }
