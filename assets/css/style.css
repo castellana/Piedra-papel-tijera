@@ -54,9 +54,12 @@ span, label {
     font-size: 1.7rem;
     text-align: center;
 }
+.final-message {
+    font-size: 2rem;
+}
 .options {
     width: 100%;
-    margin: 0 auto;
+    margin: 3vh auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +122,7 @@ img {
     font-weight: 600;
     border-radius: 10px;
     /* color: #fff; */
-    margin: 5vh auto;
+    margin: 4vh auto 1vh;
     padding: 1vh;
     font-size: 1.5rem;
 }
@@ -187,5 +190,6 @@ h2 {
 }
 .rounds {
     width: 750px;
+    margin: 0 auto;
 }
 }
