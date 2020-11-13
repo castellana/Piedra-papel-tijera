@@ -5,6 +5,7 @@
 }
 body {
     background: #A6D232;
+    height: 100vh;
 }
 header {
     background: lightblue;
@@ -49,31 +50,37 @@ span, label {
     height: 20vh;
     text-align: center;
 }
-.result-p {
+.message {
     font-size: 1.7rem;
     text-align: center;
 }
 .options {
-    /* width: 50%; */
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 
 }
-button {
-    background: none;
-    width: 30%;
 
-}
 .option-button {
     width: 30%;
+    background: none;
+    border:none;
+    text-align: center;
+    overflow: hidden;
+
 }
 img {
     width: 80%;
+    border-radius: 50%;
 }
-img:hover {
-    box-shadow: #fff;
-}
+/* img:hover {
+    border: 7px solid #06d6a0;
+    box-shadow: 0 0 10px #06d6a0;
+    background-color: #06d6a0;
+   
+} */
 /* .hide {
     display: none;
 } */
@@ -90,7 +97,8 @@ img:hover {
 .badge {
 	background: #e2584d;
 	font-size: 14px;
-	padding: 7px 3px;
+    padding: 7px 3px;
+    font-weight: bold;
 }
 
 #user-label {
@@ -111,9 +119,28 @@ img:hover {
     background: lightblue;
     font-weight: 600;
     border-radius: 10px;
-    color: #fff;
+    /* color: #fff; */
     margin: 5vh auto;
     padding: 1vh;
+    font-size: 1.5rem;
+}
+
+.green-glow{
+    border: 7px solid #06d6a0;
+    box-shadow: 0 0 10px #06d6a0;
+    background-color: #06d6a0;
+}
+
+.red-glow{
+    border: 5px solid #e63946;
+    box-shadow: 0 0 10px #e63946;
+    background-color: #e63946;
+}
+
+.gray-glow{
+    border: 5px solid #464647;
+    box-shadow: 0 0 10px #464647;
+    background-color: #464647;
 }
 
 @media only screen and (min-width: 630px) {
@@ -133,15 +160,30 @@ img:hover {
 body {
     background-color: #A6D232;
 }
+/* .container {
+    height: 70vh;
+} */
 .badge {
     padding: 15px 10px;
 }
 #user-label {
-
     padding: 15px 15px;
 }
 .container {
     width: 800px;
 }
-
+h2 {
+    font-size: 1.8rem;
+}
+#checkRounds {
+    margin: auto;
+    width: 70%;
+}
+#scores {
+    width: 50%;
+    padding: 2vh 0;
+}
+.rounds {
+    width: 750px;
+}
 }
